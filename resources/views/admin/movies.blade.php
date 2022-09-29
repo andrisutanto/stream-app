@@ -51,7 +51,11 @@
                       </td>
                       <td>{{ $movie->categories }}</td>
                       <td>{{ $movie->casts }}</td>
-                      <td></td>
+                      <td>
+                        <a href="{{ route('admin.movie.edit', $movie->id) }}" class="btn btn-secondary">
+                          <i class="fas fa-edit"></i>
+                        </a>
+                      </td>
                     </tr>
                     @endforeach
                 </tbody>

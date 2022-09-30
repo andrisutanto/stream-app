@@ -27,6 +27,7 @@ Route::group(['prefix' => 'admin'], function() {
         Route::post('/store', [MovieController::class, 'store'])->name('admin.movie.store');
         Route::get('/edit/{id}', [MovieController::class, 'edit'])->name('admin.movie.edit');
         Route::put('/update/{id}', [MovieController::class, 'update'])->name('admin.movie.update');
+        Route::delete('/destroy/{id}', [MovieController::class, 'destroy'])->name('admin.movie.destroy');
     });
     
 });

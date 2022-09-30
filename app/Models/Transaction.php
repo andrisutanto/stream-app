@@ -17,4 +17,16 @@ class Transaction extends Model
         'transaction_code',
         'status'
     ];
+
+    //add relation to table Package
+    public function package()
+    {
+        return $this->belongsTo(Package::class);
+    }
+
+    //add relation to table User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

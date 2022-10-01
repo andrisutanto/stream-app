@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => Hash::make('12345678'),
             'phone_number' => '08123456789',
-            'avatar' => 'admin',
+            'avatar' => '',
             'created_at' => now(),
             'updated_at' => now()
         ]);

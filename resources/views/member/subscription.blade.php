@@ -82,11 +82,17 @@
       by clicking the button below. Make sure that you have read our
       terms & conditions beforehand.
   </p>
-  <a href="#!" class="px-[19px] py-[13px] bg-[#FE4848] rounded-full text-center">
-      <span class="text-white font-semibold text-base">
-          Stop Subscribe
-      </span>
-  </a>
+  <form method="post" action="{{ route('member.user_premium.destroy', $user_premium->id) }}">
+    @csrf
+    @method('delete')
+    <button
+        type="submit" class="px-[19px] py-[13px] bg-[#FE4848] rounded-full text-center">
+        <span class="text-white font-semibold text-base">
+            Stop Subscribe
+        </span>
+    </button>
+  </form>
+  
 </div>
 <!-- /Stop Subscribe -->
 @endsection
